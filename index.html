@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css" id="code-theme">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle">🌓</button>
+
+    <!-- API Key Dialog -->
+    <div class="api-key-container" id="apiKeyContainer">
+        <div class="api-key-form">
+            <h2>Enter your Google Gemini API Key</h2>
+            <input type="text" id="apiKeyInput" placeholder="Paste your API key here">
+            <button id="saveApiKey">Save & Continue</button>
+            <div class="api-key-info">
+                <p>You can get your API key from <a href="https://ai.google.dev/" target="_blank">Google AI Studio</a></p>
+                <p>Your API key is stored locally in your browser and never sent to our servers.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>AI Coding Assistant</h2>
+        </div>
+        <button class="new-chat-btn"><span>New chat</span><span>+</span></button>
+        <div class="chat-history" id="chatHistory">
+            <div class="chat-item">New Chat</div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="chat-container" id="chatContainer">
+            <div class="message assistant-message">
+                <div class="avatar assistant-avatar">AI</div>
+                <div class="message-content">
+                    Hello! I'm your AI coding assistant powered by Gemini. I can help you with coding questions, generate code examples, debug issues, and more. What would you like help with today?
+                </div>
+            </div>
+        </div>
+        <div class="input-container">
+            <textarea class="input-box" id="userInput" placeholder="Type your message here..."></textarea>
+            <button class="send-btn" id="sendBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
